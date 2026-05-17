@@ -38,7 +38,10 @@ export function ReceiptPanel({
                   {CATEGORY_MAP[part.category]?.short}
                 </span>
                 <span className="receipt__line-name">
-                  {part.model || part.brand || 'Pièce'}
+                  {part.brand && (
+                    <span className="receipt__line-brand">{part.brand} </span>
+                  )}
+                  {part.model || (part.brand ? '' : 'Pièce')}
                   {part.quantity > 1 && (
                     <span className="receipt__line-qty"> ×{part.quantity}</span>
                   )}

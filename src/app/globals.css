@@ -1102,6 +1102,11 @@ h3 {
   color: var(--accent);
 }
 
+.receipt__line-brand {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .receipt__line-price {
   font-family: var(--font-mono);
   font-weight: 500;
